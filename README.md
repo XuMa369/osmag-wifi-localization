@@ -1,0 +1,1 @@
+# osmag-wifi-localization
