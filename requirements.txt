@@ -1,0 +1,17 @@
+# Core scientific computing libraries
+numpy==1.23.0
+
+# Geospatial and geometry libraries
+pyproj==3.7.1
+shapely==2.1.1
+
+# Optimization and scientific computing
+scipy==1.8.0
+
+# Machine learning
+scikit-learn==1.7.0
+
+# Data parsing and configuration
+PyYAML==5.4.1 
+
+
