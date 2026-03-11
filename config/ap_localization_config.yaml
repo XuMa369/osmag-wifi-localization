@@ -1,0 +1,87 @@
+# AP Localization System Configuration File
+# AP Localization System Configuration
+
+# File path configuration
+file_paths:
+  # Input OSM file path
+  input_osm_file: "./map/wifi_data.osm"
+  # Output OSM file path
+  output_osm_file: "./map/AP_MAP.osm"
+  # Template OSM file path
+  template_osm_file: "./map/base_map.osm"
+  # Output base directory (optional)
+  output_base_dir: null
+
+# Processing parameters
+rssi_num_threshold: 15
+learn_level: 1
+floor_height: 3.2  # Floor height (meters)
+
+# Trajectory filtering configuration
+trajectory_filter:
+  # Minimum distance threshold (meters)
+  min_distance: 2.0
+  # RSSI threshold (dBm)
+  rssi_threshold: 2.0
+  # Maximum sample count
+  max_samples: 6
+  # Whether to enable filtering
+  enable_filter: true
+
+# Confidence weight configuration
+confidence:
+  # Whether to enable weighting
+  enable_weighting: true
+  # Strong signal threshold (dBm)
+  strong_signal_threshold: -50.0
+  # Weak signal threshold (dBm)
+  weak_signal_threshold: -80.0
+  # Maximum weight
+  max_weight: 1.0
+  # Minimum weight
+  min_weight: 1.0
+  # Weight method: linear, exponential, sigmoid
+  weight_method: "exponential"
+
+# Optimization algorithm configuration
+optimization:
+  # Maximum iteration count
+  max_iterations: 10
+  # Convergence threshold
+  convergence_threshold: 0.1
+  # Whether to use building constraints
+  use_building_constraints: true
+  # Default wall attenuation value
+  wall_attenuation_default: 3.0
+  # Optimizer maximum function evaluations
+  max_function_evaluations: 10000
+  # Optimizer maximum iterations
+  optimizer_max_iterations: 1000
+  # Function tolerance
+  function_tolerance: 1e-9
+
+# Wall detection configuration
+wall_detection:
+  # Distance threshold (meters)
+  distance_threshold: 10
+  # RSSI threshold (dBm)
+  rssi_threshold: -30
+
+# RSSI propagation model default parameters
+signal_model:
+  # Default RSSI_0 parameter
+  default_rssi_0: -30
+  # Default path loss exponent
+  default_path_loss_exponent: 2.5
+  # Maximum reasonable distance (meters)
+  max_reasonable_distance: 10000
+  # Minimum reasonable distance (meters)
+  min_reasonable_distance: 0.1
+
+# Other system parameters
+system:
+  # OSM node starting ID
+  base_node_id: -1000000
+  # Penalty coefficient
+  penalty_coefficient: 111000000
+
